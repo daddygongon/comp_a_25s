@@ -33,14 +33,13 @@
 | d6(5/26) | [[https://qiita.com/daddygongon/private/72912ee2462311625abf][.xlsx チャンキング]] | 凧, 鏡餅=御神体(卑弥呼の鏡),  絶対と相対 |
 
 ** coding(memo, chunking，am/pmの実践)
-| date: chapter  | title            | contents                          |
-|----------------+------------------+-----------------------------------|
-| d7(6/2):1,2,3  | [[https://qiita.com/daddygongon/private/3c5b65e22b3c22097c2c][pair_memo]]        | ペアプロ, print, calendar         |
-| d8(6/9):4      | [[https://qiita.com/daddygongon/private/9fce7b1dbb7253f77e43][bend_brain]]       | [[https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/EcYT_dS7rvBOhlJUrxHDcZYBDq6MK_KGI9g_yO5CYh6WqQ?e=sFI3Gz][場所の記憶(dir)]],  [[https://ist.ksc.kwansei.ac.jp/~nishitani/?SevenThings][頭を...コツ]]     |
-|                | 6要素            | 演算,変数,loop,if-else,def,import |
-| d9(6/16):5     | [[https://qiita.com/daddygongon/private/aa07b0e5b2bd93ace09c][debug]]            | テンポ(写経), 一行づつ            |
-| d10(6/23):6    | [[https://qiita.com/daddygongon/private/5e99b8a742bb4d35f520][GUI=単なる見かけ]] | tkinter                           |
-| d12(7/7):7     | [[https://qiita.com/daddygongon/private/dcf0da03aba573403773][class]]            | 究極のchunking, 隠蔽(トグル)      |
+| date: chapter | title            | contents                                             |
+|---------------+------------------+------------------------------------------------------|
+| d7(6/2):1,2,3 | [[https://qiita.com/daddygongon/private/3c5b65e22b3c22097c2c][pair_memo]]        | ペアプロ, print, calendar                            |
+| d8(6/9):4     | [[https://qiita.com/daddygongon/private/9fce7b1dbb7253f77e43][6要素]]            | ディレクトリ構造(場所の記憶), テンポ(写経), 一行づつ |
+| d9(6/16):5    | [[https://qiita.com/daddygongon/private/aa07b0e5b2bd93ace09c][debug]]            | codingのコツ                                         |
+| d10(6/23):6   | [[https://qiita.com/daddygongon/private/5e99b8a742bb4d35f520][GUI=単なる見かけ]] | tkinter, [[https://ist.ksc.kwansei.ac.jp/~nishitani/?SevenThings][頭を...コツ]]                                 |
+| d12(7/7):7    | [[https://qiita.com/daddygongon/private/dcf0da03aba573403773][class]]            | 究極のchunking, 隠蔽(トグル)                         |
 
 ** 集大成
 | date      | contents                   | memo                 |
