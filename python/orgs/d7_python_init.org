@@ -1,0 +1,79 @@
+#+qiita_private: 3c5b65e22b3c22097c2c
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: コンピュータ演習A 25 :  d7(6/2) Python-I print calendar
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+TAG: Python, Windows
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* 復習
+- PowerPointでお互いにプレゼン
+* まなぶ項目
+- ペアプロ
+  - ドライバ(go!go!)とナビ(ノミ取り(nit picker)とメモ取り)
+  - [[https://ist.ksc.kwansei.ac.jp/~nishitani/?PairPro2][Pair programming]]
+- コードの気づき
+  - [[https://ist.ksc.kwansei.ac.jp/~nishitani/?c=plugin;plugin=attach_download;p=ProcessingInstall;file_name=ProcessingAppendix.pdf][コーディングの心得(Processingから修正)]]
+- codingのテンポ（詳しくは第３回）
+* init
+** VSCode
+programming編集には，code編集ソフトのVSCodeが便利です．
+- [[https://cs.kwansei.ac.jp/junbi/?%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/VSCode/%E6%9C%AC%E4%BD%93][vscodeのインストール]]
+- Get Started with VS Code(Welcome画面でStartの下にあるOpen a Walkthrough...をクリック)
+- 初期動作
+[[https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/151211/1c854ff8-45ca-4871-b4ca-65bc36c77663.png][file:../../python/figs/screen0602_vscode.png]]
+
+** kick_off
+#+begin_src bash
+  > cd comp_a_25s
+  > git stash
+  > git pull origin main
+  > cp bin/kick_off ../bin
+  > cat ~/.config/fish/config.fish
+  > if 'alias bat "batcat --theme Coldark-Cold"'が記述されていないなら
+    > sudo apt install batcat
+      > sudo apt install batcat # for failed occassion
+      > brew install bat # for mac user
+    > echo 'alias bat "batcat --theme Coldark-Cold"' > ~/.config/fish/config.fish
+  > kick_off -h
+  > kick_off -i | bat -l zsh
+  #+end_src
+** tidy dir
+#+begin_src
+  > cd ../my_comp_a
+  > mkdir lectures
+  > mv d* lectures/
+  > mkdir python
+  > cp ../comp_a_25s/python/d7_print_calendar.md python/
+  > cd python
+  > code .
+#+end_src
+
+* 課題
+*** PowerPointトーナメント課題
+今日の隣のペアとの対戦で勝った方，
+負けた方の学籍番号と名前を次のmemo.mdに追記して提出してください．
+全員が出してください．
+*** Python課題
+以下の課題の答案を含んだメモを[[https://qiita.com/daddygongon/private/1ada11cedf7be6cb4faa][memo.md]]で作成してLUNAへ提出しなさい．
+- 初めて知ったことのmemoを取りなさい
+- "Hello bob(自分の名前)!" と出力するプログラムを書き，
+  そのcodeと出力結果をmemo.mdに入れなさい
+- 自分の誕生日のcalendarを出力する
+  - codeと出力結果をmemo.mdに入れなさい
+  - 生まれた日が何曜日だったかを書きなさい．
+  - 誕生秘話があればメモしておきなさい．
+* bob's text memo
+** vscodeの初期化
+#+begin_src powershell
+PS C:\Users\wsl_python> Remove-Item -Recurse -Force $env:USERPROFILE\.vscode
+PS C:\Users\wsl_python> Remove-Item -Recurse -Force $env:APPDATA\Code
+#+end_src
+** md関連ソース
+
+- MarkDown <-> html (WYSIWYG)
+- [[https://qiita.com/oreo/items/82183bfbaac69971917f][Markdown記法一覧]]
+- [[https://gist.github.com/higeknuckle/c9b2dac43fffa3ae0774e148a69a2e6b][Markdownチートシート]]

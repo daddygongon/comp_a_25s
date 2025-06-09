@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="jp" xml:lang="jp">
+<head>
+<!-- 2025-04-14 Mon 17:31 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AoyamaType</title>
+<meta name="author" content="Shigeto R. Nishitani" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">AoyamaType</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org751fbae">1. 初めに</a></li>
+<li><a href="#org1f9fe6f">2. 手順<code>[/]</code></a>
+<ul>
+<li><a href="#org7fdc115">2.1. windows</a></li>
+<li><a href="#org7e42ac6">2.2. mac</a></li>
+</ul>
+</li>
+<li><a href="#org1360bcb">3. 補足</a>
+<ul>
+<li><a href="#org5e1030d">3.1. 視線追跡(Eye track動画)</a></li>
+<li><a href="#org93b9092">3.2. 5時間10分_キー入力習得法.pdf</a></li>
+</ul>
+</li>
+<li><a href="#org95d58a8">4. 最終試験</a></li>
+<li><a href="#org941d6ff">5. 課題</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org751fbae" class="outline-2">
+<h2 id="org751fbae"><span class="section-number-2">1.</span> 初めに</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+pythonで昨年の卒業生が作ったAoyamaTypeで
+タッチタイプの習得を行います．
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f9fe6f" class="outline-2">
+<h2 id="org1f9fe6f"><span class="section-number-2">2.</span> 手順<code>[/]</code></h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org7fdc115" class="outline-3">
+<h3 id="org7fdc115"><span class="section-number-3">2.1.</span> windows</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> wsl, fish, pipx, aoyamatypeインストール
+<ul class="org-ul">
+<li>terminalを起動</li>
+</ul></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">&gt; wsl --install
+      Enter new UNIX username: XXXX
+      New password: XXXX (表示されません)
+      Retype new password: XXXX (表示されません)
+</pre>
+</div>
+<p>
+パソコンの再起動が必要．
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">&gt; python3 --version
+&gt; sudo apt update
+&gt; sudo apt install fish
+&gt; chsh -s /usr/bin/fish
+Password: XXXX (はじめに入れたPassword)
+
+&gt; sudo apt install pipx
+      ...
+      After this operation, xxxx kB of additional disk space will be used.
+      Do you want to continue? [Y/n] Y
+&gt; pipx install git+https://github.com/37021463/aoyamatype.git
+&gt; pipx ensurepath
+&gt; pipx completions
+  fishのcommandをcopy and paste
+</pre>
+</div>
+
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> <a href="https://github.com/daddygongon/aoyamatype">AoyamaType</a>
+<ul class="org-ul">
+<li><a href="https://kwanseio365-my.sharepoint.com/:u:/g/personal/cru32369_nuc_kwansei_ac_jp/EQ-DTqOjdRNOj395Vw7qLPgBxgvuKKBZluN6THBqmQKXEA?e=RZHGta">aoyama_type_data.zip</a> をDL.</li>
+</ul></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">&gt; explorer.exe .  #でexplorerを立ち上げて，
+    - dlしたaoyama_type_datをそこへDrag&amp;Drop
+&gt; aoyamatype -d ~/aoyama_type_data.zip
+&gt; aoyamatype -c
+&gt; aoyamatype 1 #から...50
+&gt; sudo apt-get install python3-tk
+&gt; pip install PyQt6 #が必要かも．．．
+&gt; aoyamatype -r
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org7e42ac6" class="outline-3">
+<h3 id="org7e42ac6"><span class="section-number-3">2.2.</span> mac</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+<pre class="src src-shell">&gt; python3 --version
+= brew install macで検索
+&gt; /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+&gt; /opt/homebrew/bin/brew install fish
+&gt; fish
+&gt; pip install git+https://github.com/37021463/aoyamatype.git
+
+これ以降はいらないはず．
+&gt; pipx ensurepath
+&gt; pipx completions
+  fishのcommandをcopy and paste
+</pre>
+</div>
+
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> <a href="https://github.com/daddygongon/aoyamatype">AoyamaType</a>
+<ul class="org-ul">
+<li><a href="https://kwanseio365-my.sharepoint.com/:u:/g/personal/cru32369_nuc_kwansei_ac_jp/EQ-DTqOjdRNOj395Vw7qLPgBxgvuKKBZluN6THBqmQKXEA?e=RZHGta">aoyama_type_data.zip</a> をDL.</li>
+</ul></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">dlしたaoyama_type_dat.zipをterminalへDrag&amp;Drop
+&gt; aoyamatype -d ~/Download/aoyama_type_data.zip
+&gt; aoyamatype -c
+&gt; aoyamatype 1 #から...50
+&gt; sudo apt-get install python3-tk
+&gt; pip install PyQt6 #が必要かも．．．
+&gt; aoyamatype -r
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1360bcb" class="outline-2">
+<h2 id="org1360bcb"><span class="section-number-2">3.</span> 補足</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org5e1030d" class="outline-3">
+<h3 id="org5e1030d"><span class="section-number-3">3.1.</span> 視線追跡(Eye track動画)</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><a href="https://kwanseio365-my.sharepoint.com/:v:/g/personal/cru32369_nuc_kwansei_ac_jp/EQI-6D9pimpAhQhj2SQD5IYBnmym-Sto-bLVIa3iMMtzHA?e=5rwy1Q">初心者</a></li>
+<li><a href="https://kwanseio365-my.sharepoint.com/:v:/g/personal/cru32369_nuc_kwansei_ac_jp/EYWKHFEghL5Pg09P3bhGg4UBU7wwJSzThQ_DAxzEoFNRCg?e=7OWkkm">達人</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org93b9092" class="outline-3">
+<h3 id="org93b9092"><span class="section-number-3">3.2.</span> <a href="https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/EcP9a1gh_y9JjDZuJHmdoBQBqRuhxCyUigW5wg4_sk5ZYQ?e=XO0J37">5時間10分_キー入力習得法.pdf</a></h3>
+</div>
+</div>
+
+<div id="outline-container-org95d58a8" class="outline-2">
+<h2 id="org95d58a8"><span class="section-number-2">4.</span> 最終試験</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+最終試験は6/30にこの時間で行います．
+</p>
+<ul class="org-ul">
+<li>aoyamatype -c</li>
+</ul>
+<p>
+で60秒を切れば合格です．
+</p>
+
+<p>
+タッチタイピングは，速さよりも正確性とか，
+リズムが大切で，キーの位置を覚えることを
+心がけてください．
+タッチタイプは，プログラマの仲間になる第一歩です．
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org941d6ff" class="outline-2">
+<h2 id="org941d6ff"><span class="section-number-2">5.</span> 課題</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>LUNAに初回のcheckの結果を報告して．</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Shigeto R. Nishitani</p>
+<p class="date">Created: 2025-04-14 Mon 17:31</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

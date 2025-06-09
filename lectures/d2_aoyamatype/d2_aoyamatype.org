@@ -1,0 +1,110 @@
+#+qiita_public: 04377537f01674ec81db
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages content num
+#+TITLE: AoyamaType
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+TAG: Java, Mac, Windows, Mikatype
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* 初めに
+pythonで昨年の卒業生が作ったAoyamaTypeで
+タッチタイプの習得を行います．
+
+* 手順[/]
+** windows
+- [ ] wsl, fish, pipx, aoyamatypeインストール
+  - terminalを起動
+#+begin_src shell
+> wsl --install
+      Enter new UNIX username: XXXX
+      New password: XXXX (表示されません)
+      Retype new password: XXXX (表示されません)
+#+end_src
+パソコンの再起動が必要．
+#+begin_src shell
+  > python3 --version
+  > sudo apt update
+  > sudo apt install fish
+  > chsh -s /usr/bin/fish
+  Password: XXXX (はじめに入れたPassword)
+
+  > sudo apt install pipx
+        ...
+        After this operation, xxxx kB of additional disk space will be used.
+        Do you want to continue? [Y/n] Y
+  > pipx install git+https://github.com/37021463/aoyamatype.git
+#+end_src
+これでaoyamatypeが動くはず．
+
+だめな人は以下を打ち込んでterminalを再起動．
+#+begin_src
+  > pipx ensurepath
+  > pipx completions
+    fishのcommand
+    register-python-argcomplete --shell fish pipx >~/.config/fish/completions/pipx.fish
+    をcopy and paste
+#+end_src
+
+- [ ] [[https://github.com/daddygongon/aoyamatype][AoyamaType]]
+    - [[https://kwanseio365-my.sharepoint.com/:u:/g/personal/cru32369_nuc_kwansei_ac_jp/EQ-DTqOjdRNOj395Vw7qLPgBxgvuKKBZluN6THBqmQKXEA?e=RZHGta][aoyama_type_data.zip]] をDL.
+#+begin_src shell
+> explorer.exe .  #でexplorerを立ち上げて，
+    - dlしたaoyama_type_datをそこへDrag&Drop
+> aoyamatype -d ~/aoyama_type_data.zip
+> aoyamatype -c
+> aoyamatype 1 #から...50
+> sudo apt install python3-tk
+> pip install PyQt6 #が必要かも．．．
+> aoyamatype -r
+#+end_src  
+** mac
+#+begin_src shell
+> python3 --version
+= brew install macで検索
+> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+> /opt/homebrew/bin/brew install fish
+> fish
+> pip install git+https://github.com/37021463/aoyamatype.git
+
+これ以降はいらないはず．
+> pipx ensurepath
+> pipx completions
+  fishのcommandをcopy and paste
+#+end_src
+
+- [ ] [[https://github.com/daddygongon/aoyamatype][AoyamaType]]
+    - [[https://kwanseio365-my.sharepoint.com/:u:/g/personal/cru32369_nuc_kwansei_ac_jp/EQ-DTqOjdRNOj395Vw7qLPgBxgvuKKBZluN6THBqmQKXEA?e=RZHGta][aoyama_type_data.zip]] をDL.
+#+begin_src shell
+dlしたaoyama_type_dat.zipをterminalへDrag&Drop
+> aoyamatype -d ~/Downloads/aoyama_type_data.zip
+> aoyamatype -c
+> aoyamatype 1 #から...50
+> sudo apt install python3-tk
+> pip install PyQt6 #が必要かも．．．
+> aoyamatype -r
+#+end_src
+
+* 補足
+** 視線追跡(Eye track動画)
+  - [[https://kwanseio365-my.sharepoint.com/:v:/g/personal/cru32369_nuc_kwansei_ac_jp/EQI-6D9pimpAhQhj2SQD5IYBnmym-Sto-bLVIa3iMMtzHA?e=5rwy1Q][初心者]]
+  - [[https://kwanseio365-my.sharepoint.com/:v:/g/personal/cru32369_nuc_kwansei_ac_jp/EYWKHFEghL5Pg09P3bhGg4UBU7wwJSzThQ_DAxzEoFNRCg?e=7OWkkm][達人]]
+** [[https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/EcP9a1gh_y9JjDZuJHmdoBQBqRuhxCyUigW5wg4_sk5ZYQ?e=XO0J37][5時間10分_キー入力習得法.pdf]]
+
+* 最終試験
+最終試験は6/30にこの時間で行います．
+- aoyamatype -c
+で60秒を切れば合格です．
+
+# ハンカチ試験導入．
+
+タッチタイピングは，速さよりも正確性とか，
+リズムが大切で，キーの位置を覚えることを
+心がけてください．
+タッチタイプは，プログラマの仲間になる第一歩です．
+
+
+* 課題
+- LUNAに初回のcheckの結果を報告して．

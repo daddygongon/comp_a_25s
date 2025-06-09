@@ -1,0 +1,60 @@
+#+qiita_private: 72912ee2462311625abf
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: d6(5/20) .xls 専門用語
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+TAG: Python, Windows
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+ 
+* docx, pptx
+- 「記憶の構造」pptx対抗戦
+* init
+#+begin_src shell
+    > ls             # ls:list ('.'が省略, current dir)
+    aoyama_type_data.zip  bin/  comp_a_25s/ my_comp_a
+    > pwd            # print working dir
+    /home/bob   # home dir == '~' (tilde)
+                # path, '/'だけ，root(根っこの)
+    > cd comp_a_25s/ # cd : change directory [dir]
+    > git stash      # gitで隠す(stash)
+    > git pull origin main
+    > cd ../my_comp_a
+                     # cd [to_dir]: '..'は一つ上のdirを指す
+    > cp -rf ../comp_a_25s/lectures/d6_xlsx_chunk .
+                     # cp: copy --options [from_dir] [to_dir]
+                     # -r: recursively(再帰的に)
+                     # -f: force(強制的に)
+    > cd d6_xlsx_chunk
+    > tree tasks
+  tasks
+  ├── xlsx_check_rubric.org
+  ├── xlsx_orig.xlsx
+  └── xlsx.pdf
+    > open .
+#+end_src
+
+* まなぶ項目
+- [[https://qiita.com/daddygongon/items/a53d806cf493b6a56dab][既知感とチャンク]]
+- 専門用語とその記憶法
+- 絶対参照，相対参照
+* 課題
+*** pptxトーナメント課題
+ペアとの対戦で勝った方，
+負けた方の学籍番号と名前をtxtで提出してください．
+両者が出してください．
+*** xlsx課題
+#+begin_src shell
+> tree tasks
+tasks
+├── xlsx_check_rubric.org
+├── xlsx_orig.xlsx
+└── xlsx.pdf
+#+end_src
+- task directoryにあるファイル
+  - xlsx_orig.xlsx
+  を修正します．
+- xlsx.pdfに従ってxlsxを完成させ，xlsx書類をLUNAへ提出しなさい．pdfでの提出は採点しません．
+- なお，課題レポートの採点基準は [[https://qiita.com/daddygongon/private/76daaeaecccf3cc27d9f][xlsx_check_rubric.org]]

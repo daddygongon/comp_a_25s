@@ -1,0 +1,98 @@
+#+qiita_private: fda9a74076be8669c7ac
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: d5 5/19 pptx 記憶
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+TAG: Python, Windows
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* docx復習
+- 0点の人は再提出．
+- 体裁ができてない
+- [[https://qiita.com/daddygongon/items/3373e54f1538036d0cf4][レポートの体裁]] 
+** もう一つのチェックリスト
+   :PROPERTIES:
+   :CUSTOM_ID: もう一つのチェックリスト
+   :END:
+
+| パーツ       | フォント設定他           | 段落設定                   |
+|--------------+--------------------------+----------------------------|
+| 出力         | .pdf (or .docx)          |                            |
+| 題目(title)  | ゴチ(ちょっと大きめ)     | 中央揃え                   |
+| 名前(author) | 学籍番号，所属，名前     | 右ヅメ                     |
+| 見出し(head) | ゴチ                     | 左ヅメ                     |
+| caption      | ゴチ                     | インデント調整             |
+| 本文         | 明朝(10-12p)             | 両端揃え(，先頭行一字下げ) |
+| 引用(quote)  | 自分の文章と引用との区別 | インデント調整             |
+
+
+
+[fn:1] 引用は基本的に引用元にでてくる文章をそのまま使う．長いときとか，概念なんかはまとめてしまうが，参照元を明示．_参考_文献ってのは日本語として確立しているけど，あやふやなイメージを学生は持つので注意すべき．参照も同じかも．
+
+[fn:2] これは例です．
+
+** コメント
+- やり方のメモを残す
+- レポートの体裁はできています．自分への縛りは，決意表明とか目標ではないので，もっと具体的な項目に落とし込むべきです．
+- レポートの最終目標は将来の自分へのメモです．自分の役にたつ言葉・手順を残してください．
+- 悪くないよ．スタイルを使う方が便利．キャプションがないので再提出．それと縛りは決意表明ではなく，具体的に．
+- 大学で学ぶ一番の利点は友達と切磋琢磨できること．
+- 続ける工夫の一つに，divide and conquerというのがあります．目標を細かく分けて一つ一つ達成を積み重ねるやり方です．記録するのを忘れずに
+
+* init
+#+begin_src shell
+  > ls             # ls:list ('.'が省略, current dir)
+  aoyama_type_data.zip  bin/  comp_a_25s/ my_comp_a
+  > pwd            # print working dir
+  /home/bob   # home dir == '~' (tilde)
+              # path, '/'だけ，root(根っこの)
+  > cd comp_a_25s/ # cd : change directory [dir]
+  > git stash      # gitで隠す(stash)
+  > git pull origin main
+  > cd ../my_comp_a
+                   # cd [to_dir]: '..'は一つ上のdirを指す
+  > cp -rf ../comp_a_25s/lectures/d5_pptx_memory .
+                   # cp: copy --options [from_dir] [to_dir]
+                   # -r: recursively(再帰的に)
+                   # -f: force(強制的に)
+  > cd d5_pptx_memory
+  > ls (.) 
+  > open .
+#+end_src
+
+* パワポ
+*** なぜパワポ
+- [[https://ist.ksc.kwansei.ac.jp/~nishitani/GeneralLectures/nishitani(2).htm][プレゼンテーションの極意]]
+
+*** 操作練習
+- 配布資料 : [[https://ist.ksc.kwansei.ac.jp/~nishitani/?c=plugin;plugin=attach_download;p=ComputerLiteracy;file_name=PowerPoint.pdf][PowerPoint.pdf]]
+- in the task dir
+  - パワポひな形 :PowerPoint.pptx
+  - サンプル画像 : Truckey.gif,Gabit.jpg,Doara.jpg
+* 課題
+- 箇条書き，視覚化，比喩を工夫して，
+  「記憶の構造」を説明するパワポを作りなさい．
+- 全4page以内(タイトルページは除く)
+  - あるいはプレゼン時間3分以内．
+- パクってくださってもいいですよ，
+  - （フットノートで）ちゃんと引用すれば．
+- LUNAへ提出
+  - 優秀作品を選定する対抗戦を来週から実施します．
+* メモ
+- 箇条書きの操作を知らないのが大半やった．
+- 画像の操作
+- 透明色の指定は，画像を選んで，「図ツールの書式」で，左上の「色の調整」の下のほう．
+- アクションの操作
+
+* 対抗戦
+- トーナメントで優秀発表を選択
+- 何度も繰り返すことと，ちょっとずつ違うこと
+- 相互評価の観点
+  - 面白い？
+  - ためになる？
+  - まとめの工夫？
+  - 引用表示？
+  - 総合

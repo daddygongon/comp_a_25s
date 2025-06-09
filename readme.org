@@ -1,0 +1,131 @@
+#+qiita_public: 9d836a02471c2016498b
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: コンピュータ演習A 25 : outline
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:3
+#+TAG: Python, Windows
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* 自己紹介
+- 西谷
+- 野中
+- 叶
+- 村山
+
+* Links
+- [[https://qiita.com/daddygongon/items/9d836a02471c2016498b][qiita]]
+- zoom
+  - ミーティング ID: 881 7269 9550
+  - パスコード: 063239
+- [[https://kwanseio365-my.sharepoint.com/:f:/g/personal/cru32369_nuc_kwansei_ac_jp/Enu3HUyeld5Dmzvmi4IXak4Bu1HYz26m-wdvpphjU9YTMQ?e=0aIhy1][資料(zoom録画)の置き場]]
+* Schedule
+** 学修の再検討25s[/]
+| date     | title & link       | contents                                 |
+|----------+--------------------+------------------------------------------|
+| d1(4/14) | [[https://qiita.com/daddygongon/private/9272cb493e9a19f26ab1][AM/PM, PC]]          | (Body, image, LUNA)                      |
+| d2(4/21) | [[https://qiita.com/daddygongon/private/694bb83efa9aa01e1f75][気づき, AoyamaType]] | 黒熊, home position                      |
+| d3(4/28) | [[https://qiita.com/daddygongon/private/9c0ea2ba5b25dd85b9d4][GUI vs CUI]]         | 場所の記憶, まとめるコツ(体裁，場所)     |
+| d4(5/12) | [[https://qiita.com/daddygongon/private/bf2689a40f6e2816d606][.docx 双曲性]]       | 続けるコツ，意見と事実，剽窃と引用       |
+| d5(5/19) | [[https://qiita.com/daddygongon/private/fda9a74076be8669c7ac][.pptx 記憶]]         | 覚えるコツ，繰り返し                     |
+| d6(5/26) | [[https://qiita.com/daddygongon/private/72912ee2462311625abf][.xlsx チャンキング]] | 凧, 鏡餅=御神体(卑弥呼の鏡),  絶対と相対 |
+
+** coding(memo, chunking，am/pmの実践)
+| date: chapter  | title            | contents                          |
+|----------------+------------------+-----------------------------------|
+| d7(6/2):1,2,3  | [[https://qiita.com/daddygongon/private/3c5b65e22b3c22097c2c][pair_memo]]        | ペアプロ, print, calendar         |
+| d8(6/9):4      | [[https://qiita.com/daddygongon/private/9fce7b1dbb7253f77e43][bend_brain]]       | [[https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/EcYT_dS7rvBOhlJUrxHDcZYBDq6MK_KGI9g_yO5CYh6WqQ?e=sFI3Gz][場所の記憶(dir)]],  [[https://ist.ksc.kwansei.ac.jp/~nishitani/?SevenThings][頭を...コツ]]     |
+|                | 6要素            | 演算,変数,loop,if-else,def,import |
+| d9(6/16):5     | [[https://qiita.com/daddygongon/private/aa07b0e5b2bd93ace09c][debug]]            | テンポ(写経), 一行づつ            |
+| d10(6/23):6    | [[https://qiita.com/daddygongon/private/5e99b8a742bb4d35f520][GUI=単なる見かけ]] | tkinter                           |
+| d12(7/7):7     | [[https://qiita.com/daddygongon/private/dcf0da03aba573403773][class]]            | 究極のchunking, 隠蔽(トグル)      |
+
+** 集大成
+| date      | contents                   | memo                 |
+|-----------+----------------------------+----------------------|
+| d11(7/01) | [[https://qiita.com/daddygongon/private/2b349cf4bd5d52e5733d][AoyamaType Exam]]            | 不合格者は7/21に追試 |
+| d13(7/14) | Final project presentation | 力作揃い             |
+| d14(7/21) | 残りとOSS確認 , [[https://qiita.com/daddygongon/private/f0c0c05f814cbaad8f73][OSS]]        | [[https://ist.ksc.kwansei.ac.jp/~nishitani/CompAInfo/24s/compa_24s/README.html][memo]]                 |
+
+* Grading
+- 各回の提出(5) -> 60点換算(出欠がわり)
+- [[https://ist.ksc.kwansei.ac.jp/~nishitani/CompAInfo/24s/results_ppt_compe.html][ppt のボーナス]]
+- Mikatype(20点)
+- 最終成果物(20点)
+
+* d13(7/08) 最終プレゼンと相互評価
+** 最終課題
+pythonで何か動くものを作ってください．
+最終日(7/14, 21)にプレゼンしてもらい，相互評価で点数をつけます．
+
+- ゲームでなくてOKです．
+  - 画像でなくてもいいです．
+  - 文字，数字でもOKです．
+- 学生同士の相互評価を行います．
+  - 観点は，おもろい・アイデア？ すごい・コードレベル？ 頑張ってる・まとも？
+- オープンソースのライブラリを使ってもいいです．
+
+授業中に，全員が順番で，動作解説，
+工夫した点などのプレゼンを，3分程度を目安に，してもらいます．
+
+** 手順
+- プレゼン順に前に出て，
+- 自身のPCの接続
+- 動作，機能，アピール点紹介(3分を目処に)
+- 次の人は，あらかじめ横で待機してください．
+  
+** 相互評価
+[[https://kwanseio365-my.sharepoint.com/:x:/g/personal/cru32369_nuc_kwansei_ac_jp/EYeFoQB1Fd1NrmzUpRTYPFYBIZNwndl1v1NuFgp0yTNElA?e=yzbBhS][相互評価シート]]をダウンロードして相互評価をしなさい．
+各人を最高10点として全員に評点を付してLUNAへ提出しなさい．
+** ライセンスの同意
+OSS(Open Source Software)というのがあります．
+この代表がMITライセンスと呼ばれるもので，
+- ソフトウェアを自由に扱ってよいこと，
+- 再頒布時に著作権表示とライセンス表示を含めること、
+- 作者や著作権者はいかなる責任も負わないこと
+を定めています．
+
+学生さんが開発したcodeを，
+MITライセンスで公開していいかをお伺いします．
+公開しても良いという人は，LUNAに自作をアップロードしてください．
+来年度以降の授業でサンプルとして使わせていただきます．
+
+* memo(西谷のね)
+** 24sへのメッセージ
+- 記憶の対決は大成功
+- OSSライセンスは必要
+- README.org は毎回そのまま保存
+  - 最終日に，単語がいかに中身を持つかを実感
+  - 場所の記憶に
+- クイズ方式<2024-02-22 Thu>
+  - 学ぶのではなく，教えあう
+- install python from wsl
+#+begin_quote
+Literally all you have to do is open Powershell, type “wsl --install”, pick your username/password, and you’ll have Ubuntu 22.04 running. Then install VSCode, which auto-detects that WSL is installed, and voila, you can type “code .” in the Ubuntu terminal to open any directory in VSCode on the Windows side. Now that’s slick!
+#+end_quote
+- [[https://world.hey.com/dhh/vscode-wsl-makes-windows-awesome-for-web-development-9bc4d528][DHH, "VSCode + WSL makes Windows awesome for web development", February 25, 2024]]
+- [[https://frame.work/][FrameWork12th gen, weight 1.3kg]]
+
+** anaconda promptとubuntuとの連携
+#+begin_src bash
+> cd | clip # on anaconda prompt
+> wslpath 'C:\\Users\\python...(paste)' |clip.exe
+> ls /mnt/c/Users/...(paste)
+#+end_src
+
+** 動画の作り方
+*** for Mac
+- Command - Shift - 4 space の後windowをクリック
+- Command - Shift - 5 で録画が起動
+- 画面の録画はできなくて，領域を選択，それがそのまま生きる
+- 収録ボタンでスタート
+- toolbarに停止の表示
+- 右下に出ているサムネールを右にスライドすると保存される．
+- [[https://support.apple.com/en-us/HT208721#thumbnail][その他の操作]]
+
+- ffmpeg -i click.mov click.gif 
+
+*** for win11
+- [[https://www.microsoft.com/en-us/windows/learning-center/how-to-record-screen-windows-11][How to record your screen on Windows 11]]

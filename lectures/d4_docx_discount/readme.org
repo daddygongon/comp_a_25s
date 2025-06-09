@@ -1,0 +1,117 @@
+#+qiita_private: bf2689a40f6e2816d606
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: d4 5/12 docx
+#+subtitle: hyperbolic discount, markdown, pandoc, docx
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+TAG: Pandoc, report, 双曲割引
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* init(initialize:初期化)
+#+begin_src shell
+  > open .         # explorerで'.'(current dir)を開く
+#+end_src
+Explorerの表示をいじります(appendix 1)．
+
+#+begin_src shell
+  > ls             # ls:list ('.'が省略, current dir)
+  aoyama_type_data.zip  bin/  comp_a_25s/
+  > mkdir my_comp_a #mkdir: make directory [dir]
+  > cd comp_a_25s/ # cd : change directory [dir]
+  > git stash      # gitで隠す(stash)
+  > git pull origin main
+  > cd ../my_comp_a/
+                   # cd [to_dir]: '..'は一つ上のdirを指す
+  > cp -rf ../comp_a_25s/lectures/d4_docx_discount/ .
+                   # cp: copy --options [from_dir] [to_dir]
+                   # -r: recursively(再帰的に)
+                   # -f: force(強制的に)
+  > cd d4_docx_discount/
+  > open .
+#+end_src
+
+* AoyamaType
+# 以降は来週だな
+#+begin_src shell
+  > pipx install --force git+https://github.com/daddygongon/aoyamatype.git
+  > sudo apt install python3-tk
+  > pipx install PyQt6 #が必要かも．．．
+  > aoyamatype -r
+#+end_src  
+で出てきたグラフをpngで保存．
+
+* レポート
+「report ==  正しい引用 + format(体裁) 」です．
+** 剽窃と引用
+- [[https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/Edel35ir5tVHur-rJt3hN58BIueXisBxrCVOCY9rssOM9g?e=xgz38W][理科系の作文技術(木下是雄)，「意見と事実」]]
+- [[https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/ETxjRkWsYitBqGPqWY88mYEB-fS_lY82o-7oyY4ljGF_8Q?e=UG78dg][剽窃と引用(理工学部からの通達)]]
+** [[https://qiita.com/daddygongon/items/3373e54f1538036d0cf4][レポートの体裁]] 
+
+* 題材 :: 双曲性ってなに？
+# - [[https://qiita.com/daddygongon/items/5d68a28202b43b4dcc04][恐怖のマシュマロテスト]]
+** [[https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/EYhd0TQqO3hItmsrQWkKYb4BqOFOrVws_XWWJusX4AZJ_Q?e=7a62NY][池田の日経記事]]
+** OSSの便利ツールpandoc
+Markdownからdocxへの変換ツールpandocのinstallと使用例です．
+#+begin_src shell
+> sudo apt install pandoc
+> pandoc hyperbolic_discount.md --from=markdown --to=docx --output=hyperbolic_discount.docx
+> open hyperbolic_discount.docx
+#+end_src
+
+さらにreference.docxという書式フォーマットを提供するdocxを
+作っておいてそれに合わせるやり方です(付録参照)．
+: > pandoc hyperbolic_discount.md --from=markdown --to=docx --standalone --reference-doc=reference.docx --output=sample.docx
+
+* 課題
+「AoyamaTypeによる双曲性の評価」と題するレポートを作成してください．
+** GUIで
+1. 結果 : グラフの貼り付け
+   : aoyamatype -rのグラフ
+   を貼り付けて，
+1. 分析 : 初回と比較
+   : > aoyamatype -c
+   の結果を初回と比較して，寸評を加え
+1. 議論 : 自分の「続ける工夫」を書き加えて，
+1. 体裁 : Reportの体裁にしてLUNAへpdfで提出してください．
+** CUIで
+aoyamatype -rのプロットをmy_comp_a/d4_.../aoyama_reportに保存
+#+begin_src
+> pandoc aoyama.md --from=markdown --to=docx --output=aoyama.docx
+あるいは
+> pandoc aoyama.md --from=markdown --to=docx --standalone --reference-doc=reference.docx --output=aoyama.docx
+#+end_src
+
+* appendix(付録)
+** explorerのデフォルト変更
+Explorerの表示を見やすいようにデフォルトを変更します
+1. 並べ替え->グループ化->更新日時を選択
+1. ミツぼたん(...これが詳しい設定のアイコン)-> オプション選択
+1. 表示タブを選択
+1. 「フォルダーに適用」ボタンを押して，「はい」を選んで，「OK」を押す
+1. 再openしてデフォルトで適用されているのを確認
+[[https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/151211/ab0207af-c626-4bff-96bb-6de052771300.png][file:../figs/ss_change_default_explorer_disp_marked.png]]
+
+** reference.docxの作り方
+これには，
+: > pandoc --print-default-data-file reference.docx > reference.docx
+としてreference.docsという雛形を作っておいて，
+書式をそれぞれのパーツで調整して，保存しておきます．
+
+[[https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/151211/342d7a5a-07db-4aa6-a2c1-f9a8cb91d15f.png][file:./figs/screen_shot_word_style.png]]
+
+** VSCode, html, md
+markdownからdocxを作るのが速いです．
+markdownの編集には，code編集ソフトのVSCodeが便利です．
+このソフトの操作は，
+３回ほど後のPythonコーディングで詳しく紹介します．
+時間がある人は，自分で調べて使ってみてください．
+- [[https://cs.kwansei.ac.jp/junbi/?%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/VSCode/%E6%9C%AC%E4%BD%93][vscodeのインストール]]
+- Get Started with VS Code(Welcome画面でStartの下にあるOpen a Walkthrough...をクリック)
+
+- MarkDown <-> html (WYSIWYG)
+- [[https://qiita.com/oreo/items/82183bfbaac69971917f][Markdown記法一覧]]
+- [[https://gist.github.com/higeknuckle/c9b2dac43fffa3ae0774e148a69a2e6b][Markdownチートシート]]
+  

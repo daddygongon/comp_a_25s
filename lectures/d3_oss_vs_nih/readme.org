@@ -1,0 +1,61 @@
+#+qiita_private: 9c0ea2ba5b25dd85b9d4
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: OSS vs NIH, github, bin, and the others
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+TAG: GitHub, OSS, nih
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* OSS vs NIH
+- Open source softwareとNot invented here症候群
+- CUI(CLI) とGUI
+  - character user interface, command line interface
+  - graphical user interface
+
+* git and github
+#+begin_src shell
+  > sudo apt install openssh-client # defaultでは入ってないみたい
+  > ssh-keygen # passwordなどをいれず！にdefault選択
+  > ls .ssh
+  > cat .ssh/id_ed25519.pub | clip.exe # clip boardにcopy, macではpbcopy(paste board)
+  > explorer.exe https://github.com
+  - make account on Edge
+  - ssh config on settings and paste public key
+  > git clone git@github.com:daddygongon/comp_a_25s.git
+#+end_src
+
+* binにくだらない魔法を追加
+#+begin_src shell
+  > cd comp_a_25s
+  > mkdir ~/bin
+  > cp bin/open_python ~/bin/open
+ # これ以降は$PATHへの'~/bin'の登録手順
+  > mkdir ~/.config
+  > mkdir ~/.config/fish
+  > touch ~/.config/fish/config.fish
+  > echo 'set PATH ~/.local/bin ~/bin . $PATH' >>  ~/.config/fish/config.fish
+ # Ubuntuを再起動 or fishと入力
+#+end_src
+
+* the others
+#+begin_src shell
+# Macはaptの代わりにbrewする
+  
+> sudo apt install fd-find
+> sudo apt install tldr
+> sudo apt install bat
+> sudo apt install tree
+> sudo apt install sl
+#+end_src
+
+- apt :: advanced package tool
+- brew :: home brewery (密造酒)の略
+* 課題
+#+begin_src shell
+> aoyamatype -c
+#+end_src
+での結果をtextにしてLUNAへ提出．
+

@@ -1,0 +1,39 @@
+#+qiita_private: 76daaeaecccf3cc27d9f
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: xlsxチェックシート
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+TAG: Python, Windows
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+7_練習問題002のところだけで採点してください．
+
+* 採点要領
+- 成績管理の課題レポート開ける
+- 対象の学生のレポートを開ける
+- 添付ファイルをexcelで開ける
+- 採点基準に従ってユーザへのフィードバックを記入
+- 成績を記入．
+- 次へ．
+
+* 採点基準
+それぞれの項目で5点から減点．
+
+- 絶対参照が組み込まれた表が一つもなければ1点減点．
+  - 絶対参照などは添付pdfの表の欄外を参照．
+- 総数，総収入はsumを使う．
+- 絶対参照がうまく組み込まれていない．
+  - この場合はどこが組み込まれてないかを明示してください．
+  - 売り上げ収入の絶対，相対参照がおかしい．
+  - 売り上げ収入構成割合も絶対参照をつかう．
+- 収入の構成割合になってない．
+- 増減率になっていない．
+  - 増減率の定義を間違っている
+  - (H16/H15-1)*100など．これはあり．
+  - =H16/H$15　これはだめ．
+- グラフ（最低３つ）がない
+- パーセント表示と3桁区切り表示は採点しません．
+

@@ -1,0 +1,84 @@
+#+qiita_private: 9272cb493e9a19f26ab1
+#+STARTUP: indent nolineimagess overview
+#+OPTIONS: ^:{}
+#+TITLE: コンピュータ演習A 25 : Day 1st(4/14) - d1_pc
+#+subtitle: パソコンの動作と課題提出(luna)
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+# +OPTIONS:   toc:nil
+#+TAG: Python, novice
+#+TWITTER: off
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* リンク
+* 学ぶ項目[2/3]
+- [X] BYOD, iPad持参のお願い(LUNAで通知，来週からは必須)
+- [X] 初日の言葉を覚えてる？[3/3]
+  - [X] 記憶のkey
+  - [X] バディ(Body)を作れ
+  - [X]  [[https://qiita.com/daddygongon/items/b0bf7fa06a3dd601529c][AM/PMて知ったはる?]]
+- [-] パソコン(イメージの世界)の動作[1/4]
+  - [X] ポンチ絵，単語(粒度，分類)，覚える？，文字か絵か
+  - [ ] ハードウェア
+  - [ ] ソフトウェア
+  - [ ] 接続
+* パソコンの動作[1/3]
+  - 次の単語をそれぞれ適当なくくりに配置した後で，それらの単語を使って標準的なPCの動作を解説しなさい．
+    #+begin_quote
+    単語群: ディスプレイ, モニター, プリンタ, スピーカー, キーボード, マウス, タッチパッド, マイク, 文字, 数値, 画像, 音声, フラッシュメモリ(USB), ハードディスク, SSD, USB, DVD, テープ, フロッピー, ソースコード(コード), GUI, CUI, デスクトップ, Wi-Fi(IEEE 802.11), イーサネット(802.3), ルーター, ハブ, Bluetooth, クライアント
+    #+end_quote
+  - [X]  ハードウェア
+    1. 入力装置()
+    2. データ()
+    3. 主記憶装置(メインメモリ)
+    4. 補助記憶装置()
+    5. 演算装置, 制御装置, 中央処理装置(CPU)
+    6. 出力装置()
+  - [ ] ソフトウェア
+    1. プログラム()
+    2. OS, アプリ
+    3. ユーザインターフェース()
+    4. 命令(コマンド)
+  - [ ] ネット接続
+    1. 有線接続
+    2. 無線接続
+    3. web/mailサーバ
+
+  - 最新情報I(荻谷昌己他)実教出版2023, pp.62-67.
+* 作業[4/4]
+- [X] LUNAの使用(未説明:wordファイルの保存，添付, テキスト, mail)
+- [X] ペアを作る(バディ) => am/pm, 大学の意味
+- [X] 他己紹介 & 他人の話を聞くコツ=>メモ
+- [X] ペア作成，チュータ, 自己紹介
+* 課題(今日中)
+1. 他己紹介
+1. 自己紹介
+   - プログラミングに対する決意表明と，
+   - その学修にどれほど時間をかけるか
+をテキストにして，LUNAに提出しなさい．
+
+* 宿題(できれば来週までに，ほぼ全員終了しているはず)
+- windows11
+  - Terminalを立ち上げて，
+    : > wsl --install
+    :    Enter new UNIX username: XXXX
+    :    New password: XXXX (表示されません)
+    :    Retype new password: XXXX (表示されません)
+    : > python3 --version
+    パソコンの再起動が必要．'wsl --install'を２回する．
+    １回目がwsl, 2回目はUbuntuをinstallしている．
+    「'wsl.exe -d Ubuntu-24.04' を使用して起動できます 」と言われたら，
+    そうする．
+    あるいは，terminalのプルダウンメニューからUbuntuを選択．
+    
+- mac
+  - anacondaを[[https://www.anaconda.com/download][ここ]]からinstall
+  - freeで，e-mailを入れて，pcからそのリンクをクリック．
+
+- うまくいかない人は，来週チェック．
+- 出来るだけ，英語を読むように．
+
+* パソコンの動作イメージ
+![d1_pc.001.jpeg](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/151211/f68e70b2-d313-4c91-89b2-dc71d404d4f7.jpeg)
