@@ -1,0 +1,162 @@
+#+qiita_private: aa07b0e5b2bd93ace09c
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: コンピュータ演習A 25 : d9(6/16) Python-III(chap 5)_debug
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+TAG: Python, Windows
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* 学ぶ項目
+- [[processing][どこに注目するか？]]
+  - 飾り文字とその名前
+  - separator(区切り)，いろんなカッコ
+    - 名前をつけると区別がつく，chunkingの第一歩
+- codeの小ネタ
+  - ブラウザ(エクスプローラのトグル) :: ctrl-b #macではcommand-b
+  - terminalへ移動 :: alt-tab, # command-tab
+# put to next week
+#  - [[https://ist.ksc.kwansei.ac.jp/~nishitani/?SevenThings][あなたが頭を服従させるためにできる７つのこと]]
+#  - [[https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/EZ_4cGGueYVNgMFSQoKIHMcBz21wFENbwMR54dUdLo_7rA?e=JQz1UL][ヘッドファースト]]
+
+* 課題
+** 記憶のプレゼン
+- 名前をつけて，投稿
+** Python課題
+1. python code
+  1. Lesson5-2の1桁乱数のhit_and_blowを作りなさい(e5-2_one_digit.py)．
+  1. Lesson5-3の4桁乱数を生成して表示するcodeを加えて，出力を確かめなさい(e5-3_four_digit.py)．
+  1. Lesson5-4の入力をチェックするcodeと，動作の入出力を確かめなさい(e5-4_check_input.py)．
+  1. Lesson5-5のhit and blowをチェックするcodeと，動作の入出力を確かめなさい(e5-5_check_hit_and_blow.py)．
+  1. 全体code(教科書pp.147-8に相当)と，動作の入出力を確かめなさい(e5_final.py)．
+1. 完成版(e5_final.py)とその動作をe5_final.txtに保存して，LUNAに提出しなさい．
+* 最終課題
+pythonで何か動くものを作ってください．
+最終日(7/08 or 15)にプレゼンしてもらい，相互評価で点数をつけます．
+
+* オプション課題
+以降は，高度なプログラマを目指す人のためオプション課題です．
+採点からは省きます．
+** メモのmd化 
+d9_hit_and_blow.mdにまとめなさい
+  1. d9_hit_and_blow.mdを作成し，
+  1. 新しく学んだことをメモしていきなさい．
+  1. 出てきたError, バグとその原因，解決策を記述しなさい．
+  1. 編集途中のコードを
+    1. codeをpythonブロックに，
+    1. 入出力の様子をbash ブロックに
+    貼り付けなさい．
+** 一桁版のtemplate
+下の課題解答例(one_digit_template.py)を参照して，
+全体の流れがわかるようにコメントを加えた版を
+作ってみなさい．
+
+** 関数化 
+前節のコメント部分を関数化してみなさい．
+- endless_loopとending_processはそのままでいいです．
+** hit_and_blowの改善 
+教科書のhit_and_blow_check codeにはバグがあります．
+「[[https://qiita.com/daddygongon/private/d4f712658ce42e80de48][リンク]]」を参照して完動版を作ってみなさい．
+
+** 課題解答例(one_digit_template.py)
+最終codeはchunkingした後のような状態です．
+途中の試行錯誤を記録していくことが，
+mdでmemoをとる目的です．
+それが，頭に残るコツだから．
+
+次のcodeは完成版ですが，
+どのように組み上げていくかをフォローしてください．
+このような *所作習得法* を「写経」と呼んでいます．
+#+begin_src python
+# one-digit code
+
+# make random number
+import random
+a = random.randint(0,9)
+print(a)
+
+# endless loop
+while True:
+    # check input
+    b_tmp=input("type number:>")
+    b = int(b_tmp)
+    print(b)
+
+    # check hit and blow
+    hit = 0
+    if a==b:
+        hit = 4
+        print("hit")
+    else:
+        print("missed")
+    
+    # ending process
+    if hit == 4:
+        break
+#+end_src
+
+#+begin_src bash
+> python one_digit.py 
+3
+type number:>2
+2
+missed
+type number:>4
+4
+missed
+type number:>3
+3
+hit
+#+end_src
+** 課題のコメント
+*** file compare
+mdで修正した箇所だけを表示させてください．
+#+begin_src bash
+> fc file_a.md file_b.md  #for cmd.exe on win11
+> diff file_a.md file_b.md  #for terminal on mac
+#+end_src
+*** 中井
+#+begin_src python 'check print'
+print("<a",i,"b",j,">")
+#+end_src
+*** 丸本
+#+begin_src python 'check_input_hit_and_blow'
+    if b.isdecimal and len(a) == len(b):
+
+        hit = 0
+        blow = 0
+
+        for i in range(len(a)):
+            if a[i] == b[i]:
+                hit = hit + 1
+            else:
+                blow = blow + 1
+#+end_src
+#+begin_src bash
+2381
+type number:> 0000
+hit: 0
+blow: 4
+#+end_src
+*** 藏本
+#+begin_src python 'check_hit_and_blow'
+#check hit and blow
+for i in range(4):
+    if a[i] == b[i]:
+        hit = hit + 1
+    elif a[i] in b:
+        blow =blow + 1
+#+end_src
+
+#+begin_src bash
+7388
+type number:> 8333
+hit : 1
+blow : 2
+type number:> 8111
+hit : 0
+blow : 2
+#+end_src
+
