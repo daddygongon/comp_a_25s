@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="jp" xml:lang="jp">
+<head>
+<!-- 2025-06-15 Sun 15:24 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>コンピュータ演習A 25 : d9(6/16) Python-III(chap 5)_debug</title>
+<meta name="author" content="Shigeto R. Nishitani" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">コンピュータ演習A 25 : d9(6/16) Python-III(chap 5)_debug</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7513708">1. 学ぶ項目</a></li>
+<li><a href="#org6498005">2. 課題</a>
+<ul>
+<li><a href="#org5e3626c">2.1. 記憶のプレゼン</a></li>
+<li><a href="#org2b7dc1e">2.2. Python課題</a></li>
+</ul>
+</li>
+<li><a href="#orgd692dcb">3. 最終課題</a></li>
+<li><a href="#orgb3f8d79">4. オプション課題</a>
+<ul>
+<li><a href="#orgc81096f">4.1. 一桁版のtemplate</a></li>
+<li><a href="#org577c1ab">4.2. 関数化</a></li>
+<li><a href="#orgd837a1c">4.3. hit_and_blowの改善</a></li>
+<li><a href="#org6ff5855">4.4. 課題解答例(one_digit_template.py)</a></li>
+<li><a href="#org4028fef">4.5. 課題のコメント</a>
+<ul>
+<li><a href="#org7233c0c">file compare</a></li>
+<li><a href="#orgaa82fcb">中井</a></li>
+<li><a href="#org2cc1f9e">丸本</a></li>
+<li><a href="#org2d361c3">藏本</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7513708" class="outline-2">
+<h2 id="org7513708"><span class="section-number-2">1.</span> 学ぶ項目</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li><a href="https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/EUhTfOTcofpGkIN70tEjq7EBHFjEWFLSbN9ImT8PpSUuZw?e=KfxheN">どこに注目するか</a>
+<ul class="org-ul">
+<li>飾り文字とその名前</li>
+<li>separator(区切り)，いろんなカッコ
+<ul class="org-ul">
+<li>名前をつけると区別がつく，chunkingの第一歩</li>
+</ul></li>
+</ul></li>
+<li>codeの小ネタ
+<dl class="org-dl">
+<dt>ブラウザ(エクスプローラのトグル)</dt><dd>ctrl-b #macではcommand-b</dd>
+<dt>terminalへ移動</dt><dd>alt-tab, # command-tab</dd>
+</dl></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6498005" class="outline-2">
+<h2 id="org6498005"><span class="section-number-2">2.</span> 課題</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org5e3626c" class="outline-3">
+<h3 id="org5e3626c"><span class="section-number-3">2.1.</span> 記憶のプレゼン</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>名前をつけて，投稿</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2b7dc1e" class="outline-3">
+<h3 id="org2b7dc1e"><span class="section-number-3">2.2.</span> Python課題</h3>
+<div class="outline-text-3" id="text-2-2">
+<ol class="org-ol">
+<li>python code
+<ol class="org-ol">
+<li>Lesson5-2の1桁乱数のhit_and_blowを作りなさい(e5-2_one_digit.py)．</li>
+<li>Lesson5-3の4桁乱数を生成して表示するcodeを加えて，出力を確かめなさい(e5-3_four_digit.py)．</li>
+<li>Lesson5-4の入力をチェックするcodeと，動作の入出力を確かめなさい(e5-4_check_input.py)．</li>
+<li>Lesson5-5のhit and blowをチェックするcodeと，動作の入出力を確かめなさい(e5-5_check_hit_and_blow.py)．</li>
+<li>全体code(教科書pp.147-8に相当)と，動作の入出力を確かめなさい(e5_final.py)．</li>
+</ol></li>
+<li>d9_hit_and_blow.mdにまとめなさい
+<ol class="org-ol">
+<li>d9_hit_and_blow.mdを作成し，</li>
+<li>新しく学んだことをメモしていきなさい．</li>
+<li>出てきたError, バグとその原因，解決策を記述しなさい．</li>
+<li><p>
+編集途中のコードを
+</p>
+<ol class="org-ol">
+<li>codeをpythonブロックに，</li>
+<li>入出力の様子をbash ブロックに</li>
+</ol>
+<p>
+貼り付けなさい．
+</p></li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd692dcb" class="outline-2">
+<h2 id="orgd692dcb"><span class="section-number-2">3.</span> 最終課題</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+pythonで何か動くものを作ってください．
+最終日(7/08 or 15)にプレゼンしてもらい，相互評価で点数をつけます．
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb3f8d79" class="outline-2">
+<h2 id="orgb3f8d79"><span class="section-number-2">4.</span> オプション課題</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+以降は，高度なプログラマを目指す人のためオプション課題です．
+採点からは省きます．
+</p>
+</div>
+
+<div id="outline-container-orgc81096f" class="outline-3">
+<h3 id="orgc81096f"><span class="section-number-3">4.1.</span> 一桁版のtemplate</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+下の課題解答例(one_digit_template.py)を参照して，
+全体の流れがわかるようにコメントを加えた版を
+作ってみなさい．
+</p>
+</div>
+</div>
+
+<div id="outline-container-org577c1ab" class="outline-3">
+<h3 id="org577c1ab"><span class="section-number-3">4.2.</span> 関数化</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+前節のコメント部分を関数化してみなさい．
+</p>
+<ul class="org-ul">
+<li>endless_loopとending_processはそのままでいいです．</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd837a1c" class="outline-3">
+<h3 id="orgd837a1c"><span class="section-number-3">4.3.</span> hit_and_blowの改善</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+教科書のhit_and_blow_check codeにはバグがあります．
+「<a href="https://qiita.com/daddygongon/private/d4f712658ce42e80de48">リンク</a>」を参照して完動版を作ってみなさい．
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ff5855" class="outline-3">
+<h3 id="org6ff5855"><span class="section-number-3">4.4.</span> 課題解答例(one_digit_template.py)</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+最終codeはchunkingした後のような状態です．
+途中の試行錯誤を記録していくことが，
+mdでmemoをとる目的です．
+それが，頭に残るコツだから．
+</p>
+
+<p>
+次のcodeは完成版ですが，
+どのように組み上げていくかをフォローしてください．
+このような <b>所作習得法</b> を「写経」と呼んでいます．
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #7f7f7f;"># </span><span style="color: #7f7f7f;">one-digit code</span>
+
+<span style="color: #7f7f7f;"># </span><span style="color: #7f7f7f;">make random number</span>
+<span style="color: #1c86ee;">import</span> random
+<span style="color: #2e8b57;">a</span> = random.randint(0,9)
+<span style="color: #cd6600;">print</span>(a)
+
+<span style="color: #7f7f7f;"># </span><span style="color: #7f7f7f;">endless loop</span>
+<span style="color: #1c86ee;">while</span> <span style="color: #6e8b3d;">True</span>:
+    <span style="color: #7f7f7f;"># </span><span style="color: #7f7f7f;">check input</span>
+    <span style="color: #2e8b57;">b_tmp</span>=<span style="color: #cd6600;">input</span>(<span style="color: #8b7355;">"type number:&gt;"</span>)
+    <span style="color: #2e8b57;">b</span> = <span style="color: #cd6600;">int</span>(b_tmp)
+    <span style="color: #cd6600;">print</span>(b)
+
+    <span style="color: #7f7f7f;"># </span><span style="color: #7f7f7f;">check hit and blow</span>
+    <span style="color: #2e8b57;">hit</span> = 0
+    <span style="color: #1c86ee;">if</span> a==b:
+        <span style="color: #2e8b57;">hit</span> = 4
+        <span style="color: #cd6600;">print</span>(<span style="color: #8b7355;">"hit"</span>)
+    <span style="color: #1c86ee;">else</span>:
+        <span style="color: #cd6600;">print</span>(<span style="color: #8b7355;">"missed"</span>)
+
+    <span style="color: #7f7f7f;"># </span><span style="color: #7f7f7f;">ending process</span>
+    <span style="color: #1c86ee;">if</span> hit == 4:
+        <span style="color: #1c86ee;">break</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-bash">&gt; python one_digit.py 
+3
+<span style="color: #cd6600;">type</span> number:&gt;2
+2
+missed
+<span style="color: #cd6600;">type</span> number:&gt;4
+4
+missed
+<span style="color: #cd6600;">type</span> number:&gt;3
+3
+hit
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4028fef" class="outline-3">
+<h3 id="org4028fef"><span class="section-number-3">4.5.</span> 課題のコメント</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-org7233c0c" class="outline-4">
+<h4 id="org7233c0c">file compare</h4>
+<div class="outline-text-4" id="text-org7233c0c">
+<p>
+mdで修正した箇所だけを表示させてください．
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">&gt; fc file_a.md file_b.md  <span style="color: #7f7f7f;">#</span><span style="color: #7f7f7f;">for cmd.exe on win11</span>
+&gt; diff file_a.md file_b.md  <span style="color: #7f7f7f;">#</span><span style="color: #7f7f7f;">for terminal on mac</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaa82fcb" class="outline-4">
+<h4 id="orgaa82fcb">中井</h4>
+<div class="outline-text-4" id="text-orgaa82fcb">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #cd6600;">print</span>(<span style="color: #8b7355;">"&lt;a"</span>,i,<span style="color: #8b7355;">"b"</span>,j,<span style="color: #8b7355;">"&gt;"</span>)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2cc1f9e" class="outline-4">
+<h4 id="org2cc1f9e">丸本</h4>
+<div class="outline-text-4" id="text-org2cc1f9e">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #1c86ee;">if</span> b.isdecimal <span style="color: #1c86ee;">and</span> <span style="color: #cd6600;">len</span>(a) == <span style="color: #cd6600;">len</span>(b):
+
+    <span style="color: #2e8b57;">hit</span> = 0
+    <span style="color: #2e8b57;">blow</span> = 0
+
+    <span style="color: #1c86ee;">for</span> i <span style="color: #1c86ee;">in</span> <span style="color: #cd6600;">range</span>(<span style="color: #cd6600;">len</span>(a)):
+        <span style="color: #1c86ee;">if</span> a[i] == b[i]:
+            <span style="color: #2e8b57;">hit</span> = hit + 1
+        <span style="color: #1c86ee;">else</span>:
+            <span style="color: #2e8b57;">blow</span> = blow + 1
+</pre>
+</div>
+<div class="org-src-container">
+<pre class="src src-bash">2381
+<span style="color: #cd6600;">type</span> number:&gt; 0000
+hit: 0
+blow: 4
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2d361c3" class="outline-4">
+<h4 id="org2d361c3">藏本</h4>
+<div class="outline-text-4" id="text-org2d361c3">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #7f7f7f;">#</span><span style="color: #7f7f7f;">check hit and blow</span>
+<span style="color: #1c86ee;">for</span> i <span style="color: #1c86ee;">in</span> <span style="color: #cd6600;">range</span>(4):
+    <span style="color: #1c86ee;">if</span> a[i] == b[i]:
+        <span style="color: #2e8b57;">hit</span> = hit + 1
+    <span style="color: #1c86ee;">elif</span> a[i] <span style="color: #1c86ee;">in</span> b:
+        <span style="color: #2e8b57;">blow</span> =blow + 1
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-bash">7388
+<span style="color: #cd6600;">type</span> number:&gt; 8333
+hit : 1
+blow : 2
+<span style="color: #cd6600;">type</span> number:&gt; 8111
+hit : 0
+blow : 2
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Shigeto R. Nishitani</p>
+<p class="date">Created: 2025-06-15 Sun 15:24</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

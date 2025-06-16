@@ -10,8 +10,8 @@
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 * 学ぶ項目
-- [[processing][どこに注目するか？]]
-  - 飾り文字とその名前
+- [[https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/EUhTfOTcofpGkIN70tEjq7EBHFjEWFLSbN9ImT8PpSUuZw?e=KfxheN][どこに注目するか]]
+  - シンボル文字とその名前
   - separator(区切り)，いろんなカッコ
     - 名前をつけると区別がつく，chunkingの第一歩
 - codeの小ネタ
@@ -31,16 +31,7 @@
   1. Lesson5-4の入力をチェックするcodeと，動作の入出力を確かめなさい(e5-4_check_input.py)．
   1. Lesson5-5のhit and blowをチェックするcodeと，動作の入出力を確かめなさい(e5-5_check_hit_and_blow.py)．
   1. 全体code(教科書pp.147-8に相当)と，動作の入出力を確かめなさい(e5_final.py)．
-1. 完成版(e5_final.py)とその動作をe5_final.txtに保存して，LUNAに提出しなさい．
-* 最終課題
-pythonで何か動くものを作ってください．
-最終日(7/08 or 15)にプレゼンしてもらい，相互評価で点数をつけます．
-
-* オプション課題
-以降は，高度なプログラマを目指す人のためオプション課題です．
-採点からは省きます．
-** メモのmd化 
-d9_hit_and_blow.mdにまとめなさい
+1. d9_hit_and_blow.mdにまとめなさい
   1. d9_hit_and_blow.mdを作成し，
   1. 新しく学んだことをメモしていきなさい．
   1. 出てきたError, バグとその原因，解決策を記述しなさい．
@@ -48,6 +39,14 @@ d9_hit_and_blow.mdにまとめなさい
     1. codeをpythonブロックに，
     1. 入出力の様子をbash ブロックに
     貼り付けなさい．
+* 最終課題
+pythonで何か動くものを作ってください．
+最終日(7/08 or 15)にプレゼンしてもらい，相互評価で点数をつけます．
+
+* オプション課題
+以降は，高度なプログラマを目指す人のためオプション課題です．
+採点からは省きます．
+
 ** 一桁版のtemplate
 下の課題解答例(one_digit_template.py)を参照して，
 全体の流れがわかるようにコメントを加えた版を
