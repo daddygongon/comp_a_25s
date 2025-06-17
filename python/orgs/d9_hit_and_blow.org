@@ -14,6 +14,11 @@
   - シンボル文字とその名前
   - separator(区切り)，いろんなカッコ
     - 名前をつけると区別がつく，chunkingの第一歩
+
+https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/151211/91d91eb5-9dfa-4c59-8e21-5c2abee7c986.png
+
+https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/151211/f0a4be4b-689b-4101-928d-073c1e6d7de8.png
+
 - codeの小ネタ
   - ブラウザ(エクスプローラのトグル) :: ctrl-b #macではcommand-b
   - terminalへ移動 :: alt-tab, # command-tab
@@ -23,9 +28,12 @@
 
 * 課題
 ** 記憶のプレゼン
-- 名前をつけて，投稿
+- d9_memory_competitionにxlsxをupload.
+
 ** Python課題
 1. python code
+   ファイルの名前は自由です．
+   中身がわかり，しかも補完がしやすいのがいいです．
   1. Lesson5-2の1桁乱数のhit_and_blowを作りなさい(e5-2_one_digit.py)．
   1. Lesson5-3の4桁乱数を生成して表示するcodeを加えて，出力を確かめなさい(e5-3_four_digit.py)．
   1. Lesson5-4の入力をチェックするcodeと，動作の入出力を確かめなさい(e5-4_check_input.py)．
@@ -44,7 +52,7 @@ pythonで何か動くものを作ってください．
 最終日(7/08 or 15)にプレゼンしてもらい，相互評価で点数をつけます．
 
 * オプション課題
-以降は，高度なプログラマを目指す人のためオプション課題です．
+以降は，高度なプログラマを目指す人のためのオプション課題です．
 採点からは省きます．
 
 ** 一桁版のtemplate
@@ -81,7 +89,7 @@ while True:
     # check input
     b_tmp=input("type number:>")
     b = int(b_tmp)
-    print(b)
+    print(repr(b)) # representation
 
     # check hit and blow
     hit = 0
@@ -109,53 +117,3 @@ type number:>3
 3
 hit
 #+end_src
-** 課題のコメント
-*** file compare
-mdで修正した箇所だけを表示させてください．
-#+begin_src bash
-> fc file_a.md file_b.md  #for cmd.exe on win11
-> diff file_a.md file_b.md  #for terminal on mac
-#+end_src
-*** 中井
-#+begin_src python 'check print'
-print("<a",i,"b",j,">")
-#+end_src
-*** 丸本
-#+begin_src python 'check_input_hit_and_blow'
-    if b.isdecimal and len(a) == len(b):
-
-        hit = 0
-        blow = 0
-
-        for i in range(len(a)):
-            if a[i] == b[i]:
-                hit = hit + 1
-            else:
-                blow = blow + 1
-#+end_src
-#+begin_src bash
-2381
-type number:> 0000
-hit: 0
-blow: 4
-#+end_src
-*** 藏本
-#+begin_src python 'check_hit_and_blow'
-#check hit and blow
-for i in range(4):
-    if a[i] == b[i]:
-        hit = hit + 1
-    elif a[i] in b:
-        blow =blow + 1
-#+end_src
-
-#+begin_src bash
-7388
-type number:> 8333
-hit : 1
-blow : 2
-type number:> 8111
-hit : 0
-blow : 2
-#+end_src
-
