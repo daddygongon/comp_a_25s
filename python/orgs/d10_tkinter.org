@@ -1,0 +1,52 @@
+#+qiita_private: 5e99b8a742bb4d35f520
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: コンピュータ演習A 25 : d10(6/23) Python-IV(chap 6), GUI=単なる見かけ
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+TAG: Python, Windows
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* init
+- Mikatype試験の予行演習(どこ？ハンカチ)
+- [[file:../figs/][Bend the brain]]
+
+* 学ぶ項目
+** 隠蔽(カプセル化)
+  - method化
+  - トグル表示
+** デバッグ
+  - 動作を予測(テスト駆動)
+  - 文法エラー
+  - printデバッグ
+  - 検索(Edge, Bing, co-pilot)
+  - アヒルちゃん
+** 単なる見かけ(just a view)
+  - GUI vs CUI again
+  - GUIの構成要素は何？
+  - TkinterでGUI
+*** tkinter 注意
+- wsl 日本語表示の不具合
+  - sudo apt install -y fonts-takao-gothic
+  - # -*- coding: utf-8 -*- # codeの一行目にこいつを追加
+- mac
+  - [[https://stackoverflow.com/questions/71201803/tkinter-label-not-showing-on-macos][Tkinter Label not Showing on MacOS]]
+** ウィンドウ画像のキャプチャ(捕獲, capture)
+- kickoff -c
+*** markdownに
+- 画像を貼り付けてcodeで表示
+     : ![tkinter_sample](./FILE_NAME.png)
+* 課題
+1. Lesson6-2を参照して，tkinterで400x150の数当てゲームの画面を作りなさい．
+1. Lesson6-3を参照して，入出力を操作するcodeを書きなさい．
+1. Lesson6-4を参照して，ボタンを押された時にメッセージを表示しなさい．
+1. Lesson6-5を参照して，hit&blowの当たり判定を組み込みなさい．
+1. Lesson6-6を参照して，遊びやすいゲームにしなさい．
+1. 完成版(tkinter_hab.py)をLUNAに提出しなさい．   
+1. **オプション課題(採点対象外)** 
+   1. [[https://qiita.com/daddygongon/private/d4f712658ce42e80de48][先週のオプション課題のリンク]]を参照して完動チェック版にしなさい．
+   1. md, py, pngを含めたdirectoryごとLUNAに提出しなさい．
+
+
