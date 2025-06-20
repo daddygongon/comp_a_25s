@@ -11,19 +11,23 @@
 
 * init
 - Mikatype試験の予行演習(どこ？ハンカチ)
+- 最終課題と発表，評価
 - [[file:../figs/][Bend the brain]]
 
 * 学ぶ項目
 ** 隠蔽(カプセル化)
-  - method化
+  - method化(名前，役割)
   - トグル表示
+  - (divide and conquer, 分割統治=>各個撃破)
 ** デバッグ
-  - 動作を予測(テスト駆動)
+  - テスト駆動(TDD, EX)
+    - 標語(mantora) : Red, Green, Refactoring
+  - 動作を予測
   - 文法エラー
   - printデバッグ
-  - 検索(Edge, Bing, co-pilot)
+  - 検索(Edge =>, co-pilot(2020) =>, ChatGPT(2025))
   - アヒルちゃん
-** 単なる見かけ(just a view)
+** 単なる見かけ(It's just a view.)
   - GUI vs CUI again
   - GUIの構成要素は何？
   - TkinterでGUI
