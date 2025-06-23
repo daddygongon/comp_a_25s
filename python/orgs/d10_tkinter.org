@@ -10,8 +10,8 @@
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 * init
-- Mikatype試験の予行演習(どこ？ハンカチ)
-- 最終課題と発表，評価
+- AoyamaType試験の予行演習(どこ？ハンカチ)
+- [[https://qiita.com/daddygongon/items/9d836a02471c2016498b#d13708-%E6%9C%80%E7%B5%82%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%81%A8%E7%9B%B8%E4%BA%92%E8%A9%95%E4%BE%A1][最終課題と発表，評価]]
 - [[https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/151211/5f089891-19ac-4be1-828e-faacc2fe4c69.png][Bend the brain]]
 
 * 学ぶ項目
@@ -54,13 +54,19 @@
 1. Lesson6-5を参照して，hit&blowの当たり判定を組み込みなさい．
 1. Lesson6-6を参照して，遊びやすいゲームにしなさい．
 1. zipファイルをLUNAに提出してください
-   1. md, py, pngを含めたdirectoryごとLUNAに提出しなさい．
+   1. md, py, pngを含めたdirectoryごとzipにまとめてLUNAに提出しなさい．
+   1. 一つ上に上がって
+      1. zip -r d10_tkinter.zip d10_tekinter
    1. on vscode
       - extensionでMarkdown Preview Enhancedをinstall
-      - 画像ファイル(![alt txt](file/path))
-      - ソースコードファイル(@
-      
-   1. zip -r d10_tkinter.zip d10_tekinter
+      - 画像ファイル,ソースコードファイル
+#+begin_src markdown
+        ![alt txt](file/path))
+
+
+        @import "./d10_tkinter.py" {class="line-numbers}
+#+end_src
+
 1. こいつはoption
    1. [[https://qiita.com/daddygongon/private/d4f712658ce42e80de48][先週のオプション課題のリンク]]を参照して完動チェック版にしなさい．
 

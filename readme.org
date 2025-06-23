@@ -44,17 +44,17 @@
 ** 集大成
 | date      | contents                   | memo                 |
 |-----------+----------------------------+----------------------|
-| d11(7/01) | [[https://qiita.com/daddygongon/private/2b349cf4bd5d52e5733d][AoyamaType Exam]]            | 不合格者は7/21に追試 |
+| d11(6/30) | [[https://qiita.com/daddygongon/private/2b349cf4bd5d52e5733d][AoyamaType Exam]]            | 不合格者は7/21に追試 |
 | d13(7/14) | Final project presentation | 力作揃い             |
 | d14(7/21) | 残りとOSS確認 , [[https://qiita.com/daddygongon/private/f0c0c05f814cbaad8f73][OSS]]        | [[https://ist.ksc.kwansei.ac.jp/~nishitani/CompAInfo/24s/compa_24s/README.html][memo]]                 |
 
 * Grading
 - 各回の提出(5) -> 60点換算(出欠がわり)
 - [[https://ist.ksc.kwansei.ac.jp/~nishitani/CompAInfo/24s/results_ppt_compe.html][ppt のボーナス]]
-- Mikatype(20点)
+- AoyamaType(20点)
 - 最終成果物(20点)
 
-* d13(7/08) 最終プレゼンと相互評価
+* d13(7/14) 最終プレゼンと相互評価
 ** 最終課題
 pythonで何か動くものを作ってください．
 最終日(7/14, 21)にプレゼンしてもらい，相互評価で点数をつけます．
@@ -91,6 +91,13 @@ MITライセンスで公開していいかをお伺いします．
 公開しても良いという人は，LUNAに自作をアップロードしてください．
 来年度以降の授業でサンプルとして使わせていただきます．
 
+* open source 資料
+** [[http://smkn.xsrv.jp/blog/2009/03/summary_for_gpl_mit_cc_etc/][ライセンスまとめ]]
+-  [[http://www.opensource.jp/osd/osd-japanese.html][OSS(Open Source Software)の説明]]
+-  [[https://opensource.org/licenses/category][OSSのライセンス]]
+-  [[https://yamory.io/blog/about-mit-License][MITライセンス]]
+-  [[https://creativecommons.org/licenses][クリエイティブ・コモンズライセンス]] 
+** git public
 * memo(西谷のね)
 ** 24sへのメッセージ
 - 記憶の対決は大成功

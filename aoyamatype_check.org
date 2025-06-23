@@ -1,0 +1,33 @@
+#+qiita_private: 2b349cf4bd5d52e5733d
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: コンピュータ演習A 25 : d11(6/30) AoyamaType Exam
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:3
+#+TAG: Python, Windows
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* AoyamaType check
+- 10分間で，
+- aoyamatype -c
+- 手の甲にハンカチあるいは紙を載せて
+トライ．60秒をクリアしたら
+- そのままの画面で，
+- TAさんに秒数をチェック，
+- 名簿にチェック
+してもらってください．
+
+不幸にしてクリアできなかった人は，7/21の授業終了後に再試験します．
+みんな応援してあげてください．
+
+* 最終プレゼン準備
+終わった人は，
+- [[https://daeudaeu.com/category/python/][だえうさんのホームページ]]
+- [[https://qiita.com/ell/items/f0f74865c07710f1eab8][【Python】Tkinterを使ってシューティングゲーム制作]]
+- [[https://qiita.com/Yt330110713/items/ed6beb74c02515b35248][Pythonのtkinterでブロック崩しを作ってみた。]]
+- [[https://city3939.com/tkinter-py/]]
+- https://city3939.com/python-game/
+を参考にして最終プレゼンの準備をしてください．
+
