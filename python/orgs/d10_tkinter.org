@@ -12,7 +12,7 @@
 * init
 - Mikatype試験の予行演習(どこ？ハンカチ)
 - 最終課題と発表，評価
-- [[file:../figs/][Bend the brain]]
+- [[https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/151211/5f089891-19ac-4be1-828e-faacc2fe4c69.png][Bend the brain]]
 
 * 学ぶ項目
 ** 隠蔽(カプセル化)
@@ -34,7 +34,12 @@
 *** tkinter 注意
 - wsl 日本語表示の不具合
   - sudo apt install -y fonts-takao-gothic
-  - # -*- coding: utf-8 -*- # codeの一行目にこいつを追加
+  # - # -*- coding: utf-8 -*- # codeの一行目にこいつを追加
+  # meiryo, noteは関係なさそう
+  - これで，画面内の日本語表示は解決できる
+    - tkinterのウィンドウタイトルとウィジェットで異なるフォントシステムが使用される
+    - WSL2環境でのGUIアプリケーションはXサーバーとWSLgの混在で複雑な問題が発生
+    - [[https://note.com/setsuna_project/n/na1b6b81d7a4f][片無せつな実体化計画]] らしいので断念．
 - mac
   - [[https://stackoverflow.com/questions/71201803/tkinter-label-not-showing-on-macos][Tkinter Label not Showing on MacOS]]
 ** ウィンドウ画像のキャプチャ(捕獲, capture)
