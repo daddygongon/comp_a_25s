@@ -1,0 +1,70 @@
+#+qiita_private: dcf0da03aba573403773
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: コンピュータ演習A 25 : d11(7/7) Python-V(chap 7), 究極のchunking=class
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:3
+#+TAG: Python, Windows
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* 学ぶ項目
+今日は「跳ね回るたまたま」を作っていきます．
+何か大きなものを作るのも，小さなステップの積み重ねです．
+小さな動く枠組みから初めて，徐々に細かい動作を付け足していく，
+ゲームやアニメを作るのとよく似た作業です．
+アーティストになったつもりで，
+一歩先の動作を思い描きながら，
+コードを少しずつ改良していってください．
+
+- 動作がおかしい時は，その前の段階からいじったコードに間違いがあります．
+- その該当するテキスト（教科書）をじっくり読み込むようにしてください．
+- 作業を一つ飛ばしたり，1行飛ばしたり，一文字違ったり．
+- 出力されたエラーを読んでください．
+- まずはエラー行と単語をチェックしてください．
+これだけでもコーディング効率は格段に上がります．
+
+* 課題
+** 提出物
+完成版(bouncing_balls.py)だけでなく，途中のcapture画像，
+python codeをmdにリンクして，ディレクトリをzipでまとめて
+LUNAに提出しなさい．
+
+** python code
+  1. Lesson7-2を参照して，tkinterで日の丸を作りなさい．
+  1. Lesson7-3を参照して，クリックに反応させなさい．
+  1. Lesson7-4を参照して，うごく球を作りなさい．
+  1. Lesson7-5, 7-6を参照して，跳ねる球を作りなさい．
+  1. Lesson7-7を参照して，たくさんの跳ねる球を作りなさい．
+
+** Lesson7-7の注意
+p.209-10(example07-07-01.py)までできれば一度完成です．
+修正は一度に頭からするのではなく，細かくステップを切って修正してください．
+私は，次の項目を一行ずつ変更して行きます．
+1. line:4のballsの一つ目だけを追加．
+1. line:10 globalにballsを追加
+1. line:11 for b in balls:にする
+1. line:12-31インデントを追加
+1. dx,dyをb["dx"], b["dy"]に変更
+1. x, y をb["x"], b["y"]に変更
+1. line:21のfill = 'red'をfill=b["color"]に変更
+上手くいったら，ballsを付け足して全ての動作を確認
+
+https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/151211/58967ed9-c760-39ab-5d6e-d2b16838ea08.gif
+
+** オプション課題(それぞれ加点)
+**** balls：クラスで作るたま
+Lesson7-8, 9は任意ですが，プログラミングの最新のコツです．
+class化できるとコードが読みやすくなります．
+要はチャンキングですが，じっくり読んでみてください．
+
+#+name: ./d11_bouncing_balls/bouncing_ball_v5_class.py
+#+include: ./d11_bouncing_balls/bouncing_ball_v5_class.py src python -n -i
+# - [[https://qiita.com/daddygongon/items/53c1206ca4f68a77f1bf][「いちばんやさしいPython入門教室」修正]]
+
+**** さらに発展 たまたま^8（これは加点対象外）
+さらなる発展です．ここまで来ると芸術だ！？
+- [[https://qiita.com/daddygongon/items/b28c7364e868fc637455][bouncing balls(跳ねるたまたま)を増殖(たまたま^8)させてみた]]
+  
+

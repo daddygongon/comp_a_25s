@@ -21,9 +21,11 @@ else:
     1. cd comp_a_25s
     2. git stash                         # 変更をgitに無かったことに
     3. git pull origin main              # 最新のfilesをgitでpull(引っ張ってくる)
+        3-1. git config --global pull.rebase true # 上で黄色くなった時
     4. cp bin/kick_off ~/bin             # 最新版のkick_offを~/binにcopy
     5. cd ~/my_comp_a/python
-    6. cp ~/comp_a_25s/python/hogehoge . # hogehogeファイルを'.'にcp""")
+    6. cp ~/comp_a_25s/python/hogehoge . # hogehogeファイルを'.'にcp
+        6-1. cp -rf ... # directoryを丸ごとコピーするとき""")
 
     if args.w:
         print("""wsl shell commands
