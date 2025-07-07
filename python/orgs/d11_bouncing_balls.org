@@ -53,7 +53,7 @@ p.209-10(example07-07-01.py)までできれば一度完成です．
 
 https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/151211/58967ed9-c760-39ab-5d6e-d2b16838ea08.gif
 
-** オプション課題(それぞれ加点)
+** オプション課題(最初のは加点)
 **** balls：クラスで作るたま
 Lesson7-8, 9は任意ですが，プログラミングの最新のコツです．
 class化できるとコードが読みやすくなります．
